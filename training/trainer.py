@@ -59,6 +59,7 @@ class NanoMindTrainer:
         from trl import SFTTrainer
         from transformers import TrainingArguments
         from unsloth import is_bfloat16_supported
+        from datasets import Dataset
 
         print("Building trainer...")
         training_args = TrainingArguments(
@@ -80,10 +81,16 @@ class NanoMindTrainer:
             report_to="none",
         )
 
+    
+        if hasattr(dataset, 'samples'):
+            dataset = Dataset.from_list(list(dataset.samples))
+        elif isinstance(dataset, list):
+            dataset = Dataset.from_list(dataset)
+
         self.trainer = SFTTrainer(
             model=self.model,
             tokenizer=self.tokenizer,
-            train_dataset=dataset.samples,
+            train_dataset=dataset,
             dataset_text_field="text",
             max_seq_length=self.config.model.max_seq_length,
             args=training_args,
