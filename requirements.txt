@@ -1,0 +1,9 @@
+unsloth
+transformers
+trl
+datasets
+torch
+peft
+accelerate
+google-generativeai
+bitsandbytes
