@@ -27,7 +27,7 @@ class TrainingConfig:
     """Training loop configuration."""
     output_dir: str = "outputs/nanomind-finetuned"
     num_train_epochs: int = 1
-    per_device_train_batch_size: int = 2
+    per_device_train_batch_size: int = 4
     gradient_accumulation_steps: int = 4
     warmup_steps: int = 10
     learning_rate: float = 2e-4
