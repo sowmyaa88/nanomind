@@ -83,7 +83,7 @@ class NanoMindTrainer:
         self.trainer = SFTTrainer(
             model=self.model,
             tokenizer=self.tokenizer,
-            train_dataset=dataset,
+            train_dataset=dataset.samples,
             dataset_text_field="text",
             max_seq_length=self.config.model.max_seq_length,
             args=training_args,
