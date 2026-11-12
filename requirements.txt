@@ -1,0 +1,39 @@
+# Core ML Libraries
+torch
+transformers
+datasets
+tokenizers
+
+# Model optimization and quantization
+peft
+llmcompressor
+
+# High-performance inference
+vllm
+
+# Training and fine-tuning
+trl
+unsloth
+
+# Hugging Face ecosystem
+huggingface_hub
+accelerate
+
+# Scientific computing
+numpy
+sympy
+
+# Data processing and analysis
+pandas
+
+# Environment management
+python-dotenv
+
+# Data validation and serialization
+pydantic
+
+# Google AI integration
+google-genai
+
+
+
